@@ -11,13 +11,14 @@ article {
 .clock {
     /* Position */
     display: inline-block;
+    padding: 10px;
+    margin-bottom: 2px;
     
     /* Style */
     font-size: 100px;
     font-family: 'VT323', monospace;
     text-align: center;
     width: 360px;
-    padding: 10px;
     border-radius: 30px;
     background-color: rgb(0, 136, 29);
     border: 3px dotted rgb(32, 32, 32);
@@ -25,9 +26,18 @@ article {
 }
 
 .sec {
-    color: red; /* Visually, felt like the seconds should be a different color — less confusing */
+    color: red; /* Visually, felt like the seconds should be a different color — seems less confusing */
 }
 
 .amPm {
     visibility: hidden; /* Defaults to hidden, since we start in mil time */
+    font-size: 100px;
+    font-family: 'VT323', monospace;
+    margin: 2px;
 }
+
+p {
+    font-family: 'VT323', monospace;
+}
+
+
