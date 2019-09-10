@@ -6,11 +6,11 @@ let secNum = document.querySelector('.sec');
 function currentTime() {
     let date = new Date(); // Creates a new date object
     // Gets hours, min, sec
-    let hr = date.getHours();
+    let hr = date.getHours(); // Comment this out and set a number (0-23) to test if various am/pm times work
     let min = date.getMinutes();
     let sec = date.getSeconds();
     // Inserts hours, min, sec into HTML
-    if (btn.getAttribute('class') === 'mil') {
+    if (btn.getAttribute('class') === 'mil') { // If civilian time toggeled, runs the following to convert to civilian time
         if (hr === 0) {
             amPmView.innerHTML = 'MIDNIGHT'; // If hr = 0, MIDNIGHT
         } else if (hr > 0 && hr < 12) {
@@ -18,7 +18,7 @@ function currentTime() {
         } else if (hr === 12) {
             amPmView.innerHTML = 'NOON'; // If hr = 12, NOON
         } else {
-            amPmView.innerHTML = 'PM'; // If hr > 12 = PM, and hr -12
+            amPmView.innerHTML = 'PM'; // If hr > 12 = PM, then subtracts 12 from hr
             hr = `${hr - 12}`;
         }
         addZero(hr, hrNum);
@@ -29,7 +29,7 @@ function currentTime() {
     addZero(sec, secNum);
 }
 
-// Function to add a zero if the time is a unit < 10
+// || Function to add a zero if the time is a unit < 10
 function addZero(timeUnit, timePlace) {
     if (timeUnit < 10) {
         timeUnit = `0${timeUnit}`;
@@ -45,9 +45,7 @@ setInterval(currentTime, 250);
 
 
 
-
-
-// Change between Military and Civilian Time
+// || Change between Military and Civilian Time
 let btn = document.querySelector('button');
 let amPmView = document.querySelector('.amPm');
 
@@ -65,27 +63,6 @@ function clickBtn() {
 }
 
 btn.addEventListener ('click', clickBtn);
-
-// Changing am vs pm
-
-
-function amOrPm(currentHr) {
-    if (currentHr > 12) {
-
-    }
-}
-
-
-
-// Need to toggle between hidden and visible, 
-
-
-
-
-
-// Strech: day, month, year button -- 12 and 24hr time button
-
-
 
 
 
