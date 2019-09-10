@@ -11,9 +11,17 @@ function currentTime() {
     let sec = date.getSeconds();
     // Inserts hours, min, sec into HTML
     if (btn.getAttribute('class') === 'mil') {
-        hr = `${hr - 12}`;
+        if (hr === 0) {
+            amPmView.innerHTML = 'MIDNIGHT'; // If hr = 0, MIDNIGHT
+        } else if (hr > 0 && hr < 12) {
+            amPmView.innerHTML = 'AM'; // If hr between 0 and 12 = AM
+        } else if (hr === 12) {
+            amPmView.innerHTML = 'NOON'; // If hr = 12, NOON
+        } else {
+            amPmView.innerHTML = 'PM'; // If hr > 12 = PM, and hr -12
+            hr = `${hr - 12}`;
+        }
         addZero(hr, hrNum);
-
     } else {
             addZero(hr, hrNum);
     }
