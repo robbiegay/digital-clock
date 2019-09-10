@@ -32,6 +32,4 @@ function currentTime() {
     secNum.innerHTML = sec;
 }
 
-for (i = 0; i < 100; i++) {
-    setInterval(currentTime(), 1000); 
-}
+setInterval(currentTime, 250);
