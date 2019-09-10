@@ -13,6 +13,7 @@ function currentTime() {
     if (btn.getAttribute('class') === 'mil') {
         hr = `${hr - 12}`;
         addZero(hr, hrNum);
+
     } else {
             addZero(hr, hrNum);
     }
@@ -40,35 +41,35 @@ setInterval(currentTime, 250);
 
 // Change between Military and Civilian Time
 let btn = document.querySelector('button');
+let amPmView = document.querySelector('.amPm');
 
 function clickBtn() {
     let statusBtn = btn.getAttribute('class');
-    if (statusBtn === 'civil') {
+    if (statusBtn === 'civil') { // Changes to civilian time
         btn.setAttribute('class', 'mil');
         btn.innerHTML = 'Military Time';
-    } else {
+        amPmView.setAttribute('style', 'visibility: visible;');
+    } else { // Changes to military time
         btn.setAttribute('class', 'civil');
         btn.innerHTML = 'Civilian Time';
+        amPmView.setAttribute('style', 'visibility: hidden;');
     }
 }
 
 btn.addEventListener ('click', clickBtn);
 
 // Changing am vs pm
-let amOr = document.querySelector('.amOrPm');
 
-function toMil(x, func) {
-    if (x) { // should run is x = true, ie if told to change to Mil Time
-        if (hr > 12) {
-            amOr.innerHTML = 'AM';
-            hr = `${hr -12}`;
-            func;
-        }
-    } else {
-        func;
+
+function amOrPm(currentHr) {
+    if (currentHr > 12) {
+
     }
 }
 
+
+
+// Need to toggle between hidden and visible, 
 
 
 

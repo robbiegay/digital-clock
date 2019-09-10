@@ -27,3 +27,7 @@ article {
 .sec {
     color: red; /* Visually, felt like the seconds should be a different color — less confusing */
 }
+
+.amPm {
+    visibility: hidden; /* Defaults to hidden, since we start in mil time */
+}
