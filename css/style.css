@@ -1,4 +1,6 @@
-
+html {
+    background-color: darkgrey;
+}
 
 article {
     width: 100%;
@@ -12,15 +14,16 @@ article {
     
     /* Style */
     font-size: 100px;
+    font-family: 'VT323', monospace;
     text-align: center;
     width: 360px;
     padding: 10px;
     border-radius: 30px;
-    background-color: purple;
-    border: 3px dotted green;
+    background-color: rgb(0, 136, 29);
+    border: 3px dotted rgb(32, 32, 32);
     color: white;
 }
 
 .sec {
-    color: red;
+    color: red; /* Visually, felt like the seconds should be a different color — less confusing */
 }
